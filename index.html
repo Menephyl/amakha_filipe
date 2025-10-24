@@ -529,7 +529,7 @@
         }
 
         .footer-logo {
-            min-width: 300px;
+            min-width: 100VW;
             width: 100%;
             height: auto;
             margin-top: 1rem;
@@ -542,7 +542,7 @@
         }
 
         .zoom-container {
-            min-width: 43rem;
+            max-width: 43rem;
             height: auto;
             margin: 10px;
         }
@@ -571,7 +571,7 @@
             }
 
             .zoom-container {
-                width: 100%;
+                max-width: 350px;
                 max-width: 23rem;
                 overflow: hidden;
                 border-radius: 8px;
@@ -611,18 +611,25 @@
             section {
                 padding: 3rem 1rem;
             }
+        
+            footer{
+                min-width: 300px;
+                min-height: 600px;
+               
+            }
 
+        
 
 
             .zoom-container {
-                width: 100%;
-                max-width: 23rem;
+                background: var(--secondary);
+                max-width: 20rem;
                 overflow: hidden;
                 border-radius: 8px;
             }
 
             .zoom-container img {
-                width: 100%;
+                max-width: 300px;
                 transition: transform 0.5s ease;
             }
 
@@ -894,7 +901,8 @@
                     <i class="fab fa-whatsapp"></i>
                     <span>WhatsApp do Filipe</span>
                 </a>
-                <a href="https://www.instagram.com/filipeamakha?igsh=MW5lcnF2cjJhNWJnNA==&utm_source=ig_contact_invite" class="contact-button instagram" target="_blank">
+                <a href="https://www.instagram.com/filipeamakha?igsh=MW5lcnF2cjJhNWJnNA==&utm_source=ig_contact_invite"
+                    class="contact-button instagram" target="_blank">
                     <i class="fab fa-instagram"></i>
                     <span>Instagram</span>
                 </a>
@@ -921,7 +929,8 @@
     <footer>
         <p>Revendedor Autorizado: Filipe</p>
         <img class="zoom-container" src="./unnamed.jpg" alt="filipe">
-        <p>&copy;Projeto feito por <a href="https://instagram.com/yan_menephyl_works" target="_blank">Yan Menephyl Works</a> - Todos os direitos reservados</p>
+        <p>&copy;Projeto feito por <a href="https://instagram.com/yan_menephyl_works" target="_blank">Yan Menephyl
+                Works</a> - Todos os direitos reservados</p>
     </footer>
 
     <script>
