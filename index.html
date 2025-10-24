@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Seja revendedor Amakha Paris e lucre de 100% a 200%. Mais de 600 produtos, loja virtual pronta, sem estoque. Comece seu negócio hoje!">
+    <meta name="description"
+        content="Seja revendedor Amakha Paris e lucre de 100% a 200%. Mais de 600 produtos, loja virtual pronta, sem estoque. Comece seu negócio hoje!">
     <title>Filipe - Amakha Paris</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -89,8 +91,8 @@
         .hero {
             margin-top: 70px;
             min-height: 90vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23003366" width="1200" height="800"/><circle cx="200" cy="200" r="150" fill="%230055aa" opacity="0.3"/><circle cx="1000" cy="600" r="200" fill="%230055aa" opacity="0.3"/></svg>');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23003366" width="1200" height="800"/><circle cx="200" cy="200" r="150" fill="%230055aa" opacity="0.3"/><circle cx="1000" cy="600" r="200" fill="%230055aa" opacity="0.3"/></svg>');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -580,8 +582,32 @@
                 padding: 3rem 1rem;
             }
         }
+
+        .zoom-container {
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .zoom-container img {
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .zoom-container:hover img {
+            transform: scale(1.2);
+        }
+
+        /* Para dispositivos móveis: zoom ao tocar */
+        @media (hover: none) and (pointer: coarse) {
+            .zoom-container img:active {
+                transform: scale(1.2);
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -599,8 +625,10 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Transforme Sua Vida com Amakha Paris</h1>
-            <p>Adquira nossos produtos com 50% de desconto e lucre até 200% na revenda! Cadastro gratuito e negócio lucrativo!</p>
-            <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button" target="_blank">Cadastre-se Grátis Agora</a>
+            <p>Adquira nossos produtos com 50% de desconto e lucre até 200% na revenda! Cadastro gratuito e negócio
+                lucrativo!</p>
+            <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button" target="_blank">Cadastre-se
+                Grátis Agora</a>
             <div class="hero-media">
                 <video width="340" height="360" controls muted>
                     <source src="./introdução.mp4" type="video/mp4">
@@ -619,19 +647,23 @@
                     <img src="fabrica.png" alt="Fábrica Amakha Paris">
                 </div>
             </div>
-            
+
             <div class="about-content">
                 <div class="about-card">
                     <h3>Quem Somos</h3>
-                    <p>A Amakha Paris acredita no potencial de cada pessoa como sendo único. Por isso, a empresa se destaca no mercado de Venda Direta justamente por apresentar um modo de negócio que garante mais qualidade de vida a todos os nossos consultores fortalecendo o empreendedorismo por meio de oportunidades únicas pela empresa.</p>
+                    <p>A Amakha Paris acredita no potencial de cada pessoa como sendo único. Por isso, a empresa se
+                        destaca no mercado de Venda Direta justamente por apresentar um modo de negócio que garante mais
+                        qualidade de vida a todos os nossos consultores fortalecendo o empreendedorismo por meio de
+                        oportunidades únicas pela empresa.</p>
                     <p>A Amakha foi fundada em 2017 e temos quase 2 milhões de famílias em nosso negócio.</p>
-                    
+
                     <h4>Propósito</h4>
-                    <p>Gerar oportunidades, contribuir para a inclusão social e geração de renda no Brasil e no mundo.</p>
-                    
+                    <p>Gerar oportunidades, contribuir para a inclusão social e geração de renda no Brasil e no mundo.
+                    </p>
+
                     <h4>Crenças</h4>
                     <p>Acreditamos nas pessoas e no seu desenvolvimento.</p>
-                    
+
                     <h4>Cultura</h4>
                     <p>Ágil, criativa, inclusiva, adoramos fomentar oportunidades.</p>
                 </div>
@@ -642,7 +674,7 @@
     <section id="products" class="products">
         <div class="container">
             <h2 class="section-title">Mais de 600 Produtos para seu consumo inteligente e para revenda</h2>
-            
+
             <div class="product-showcase">
                 <video controls muted>
                     <source src="./produtos.mp4" type="video/mp4">
@@ -764,7 +796,8 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button" target="_blank">Fazer Cadastro Gratuito</a>
+                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button" target="_blank">Fazer
+                    Cadastro Gratuito</a>
             </div>
         </div>
     </section>
@@ -791,8 +824,10 @@
                 </div>
             </div>
             <div style="margin-top: 3rem;">
-                <p style="font-size: 1.3rem; margin-bottom: 1rem;">Se sua mente pode conceber, você pode realizar! Junte-se a milhares de revendedores de sucesso!</p>
-                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button" target="_blank">Cadastre-se Grátis Agora</a>
+                <p style="font-size: 1.3rem; margin-bottom: 1rem;">Se sua mente pode conceber, você pode realizar!
+                    Junte-se a milhares de revendedores de sucesso!</p>
+                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button"
+                    target="_blank">Cadastre-se Grátis Agora</a>
             </div>
         </div>
     </section>
@@ -814,13 +849,16 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title" style="color: white;">Cadastre-se Grátis ou Fale Comigo</h2>
-            <p style="font-size: 1.3rem; margin-bottom: 2rem;">Faça seu cadastro gratuito agora ou tire suas dúvidas comigo!</p>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">Faça seu cadastro gratuito agora ou tire suas dúvidas
+                comigo!</p>
             <div class="contact-buttons">
-                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="contact-button" style="background: #00cc66;" target="_blank">
+                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="contact-button"
+                    style="background: #00cc66;" target="_blank">
                     <i class="fas fa-user-plus"></i>
                     <span>Cadastro Gratuito</span>
                 </a>
-                <a href="https://wa.me/5538998055777?text=Olá!%20Quero%20saber%20mais%20sobre%20ser%20revendedor%20Amakha%20Paris" class="contact-button whatsapp" target="_blank">
+                <a href="https://wa.me/5538998055777?text=Olá!%20Quero%20saber%20mais%20sobre%20ser%20revendedor%20Amakha%20Paris"
+                    class="contact-button whatsapp" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     <span>WhatsApp do Filipe</span>
                 </a>
@@ -833,10 +871,12 @@
     </section>
 
     <div class="floating-buttons">
-        <a href="https://escritorio.amakhaparis.com.br/join/149096" class="floating-btn" style="background: #00cc66;" target="_blank" title="Cadastro Gratuito">
+        <a href="https://escritorio.amakhaparis.com.br/join/149096" class="floating-btn" style="background: #00cc66;"
+            target="_blank" title="Cadastro Gratuito">
             <i class="fas fa-user-plus"></i>
         </a>
-        <a href="https://wa.me/5538998055777?text=Olá!%20Quero%20saber%20mais%20sobre%20ser%20revendedor%20Amakha%20Paris" class="floating-btn floating-whatsapp" target="_blank" title="WhatsApp">
+        <a href="https://wa.me/5538998055777?text=Olá!%20Quero%20saber%20mais%20sobre%20ser%20revendedor%20Amakha%20Paris"
+            class="floating-btn floating-whatsapp" target="_blank" title="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
         <a href="https://instagram.com/seuinstagram" class="floating-btn floating-instagram" target="_blank"
@@ -848,7 +888,8 @@
     <!-- Footer -->
     <footer>
         <p>Revendedor Autorizado: Filipe</p>
-        <img class="zoom-container"  width="300" src="./unnamed.jpg" alt="filipe">
+        <img class="zoom-container" 
+         src="./unnamed.jpg" alt="filipe">
         <p>&copy;Projeto feito por Yan Menephyl Works - Todos os direitos reservados</p>
     </footer>
 
