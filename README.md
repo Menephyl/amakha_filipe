@@ -1,7 +1,8 @@
 # 📄 Landing Page — Amakha Paris
-![alt text](flat-devices-mockupmakha.png)
+
 
 ## 🧩 Visão Geral
+<img width="2800" height="2100" alt="flat-devices-mockupmakha" src="https://github.com/user-attachments/assets/e1e600ee-57df-4fc5-87f6-0e3b00408eef" />
 
 
 Landing page promocional desenvolvida para divulgar a oportunidade de negócio da **Amakha Paris**, com foco em atrair novos consultores por meio de cadastro gratuito e apresentação dos benefícios da revenda de produtos.
