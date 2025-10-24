@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Seja revendedor Amakha Paris e lucre de 100% a 200%. Mais de 600 produtos, loja virtual pronta, sem estoque. Comece seu negócio hoje!">
-    <title>FIlipe</title>
+    <meta name="description" content="Seja revendedor Amakha Paris e lucre de 100% a 200%. Mais de 600 produtos, loja virtual pronta, sem estoque. Comece seu negócio hoje!">
+    <title>Filipe - Amakha Paris</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -21,7 +19,6 @@
             --accent: #00cc66;
             --light: #f0f4f8;
             --dark: #001a33;
-            --gradient: linear-gradient(135deg, #003366 0%, #0055aa 100%);
         }
 
         body {
@@ -31,7 +28,6 @@
             overflow-x: hidden;
         }
 
-        /* Header */
         header {
             background: var(--dark);
             color: white;
@@ -41,17 +37,7 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            animation: slideDown 0.5s ease;
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-            }
-
-            to {
-                transform: translateY(0);
-            }
+            transition: transform 0.3s;
         }
 
         nav {
@@ -100,11 +86,11 @@
             width: 100%;
         }
 
-        /* Hero Section */
         .hero {
             margin-top: 70px;
             min-height: 90vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23003366" width="1200" height="800"/><circle cx="200" cy="200" r="150" fill="%230055aa" opacity="0.3"/><circle cx="1000" cy="600" r="200" fill="%230055aa" opacity="0.3"/></svg>');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23003366" width="1200" height="800"/><circle cx="200" cy="200" r="150" fill="%230055aa" opacity="0.3"/><circle cx="1000" cy="600" r="200" fill="%230055aa" opacity="0.3"/></svg>');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -112,39 +98,40 @@
             justify-content: center;
             text-align: center;
             color: white;
-            position: relative;
-            overflow: hidden;
+            padding: 2rem;
         }
 
         .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-            animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            max-width: 900px;
+            width: 100%;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            animation: fadeInUp 1s ease 0.2s both;
         }
 
         .hero p {
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 3vw, 1.5rem);
             margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-media {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .hero-media video,
+        .hero-media img {
+            max-width: 100%;
+            width: 340px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .cta-button {
@@ -155,22 +142,10 @@
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2vw, 1.2rem);
             transition: all 0.3s;
             box-shadow: 0 5px 15px rgba(0, 204, 102, 0.4);
-            animation: fadeInUp 1s ease 0.6s both, pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
+            margin: 1rem;
         }
 
         .cta-button:hover {
@@ -179,7 +154,6 @@
             box-shadow: 0 10px 25px rgba(0, 204, 102, 0.6);
         }
 
-        /* Section Styles */
         section {
             padding: 5rem 2rem;
         }
@@ -191,11 +165,10 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin-bottom: 3rem;
             color: var(--secondary);
             position: relative;
-            animation: fadeIn 1s ease;
         }
 
         .section-title:after {
@@ -209,25 +182,15 @@
             background: linear-gradient(90deg, #003366 0%, #00cc66 100%);
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* About Section */
         .about {
             background: var(--light);
         }
 
         .about-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .about-card {
@@ -236,19 +199,6 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
-            animation: slideIn 0.8s ease;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
         }
 
         .about-card:hover {
@@ -256,10 +206,10 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .about-card i {
-            font-size: 3rem;
-            color: #003366;
-            margin-bottom: 1rem;
+        .about-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
 
         .about-card h3 {
@@ -268,14 +218,18 @@
             color: var(--secondary);
         }
 
-        /* Products Section */
+        .about-card h4 {
+            margin-top: 1rem;
+            color: var(--primary);
+        }
+
         .products {
             background: white;
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -286,11 +240,10 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
-            cursor: pointer;
         }
 
         .product-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
@@ -301,13 +254,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
-            color: white;
-            transition: all 0.3s;
+            overflow: hidden;
         }
 
-        .product-card:hover .product-image {
-            transform: scale(1.1);
+        .product-image video,
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .product-info {
@@ -320,11 +274,19 @@
             color: var(--secondary);
         }
 
-        .product-info p {
-            color: #666;
+        .product-showcase {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
         }
 
-        /* Benefits Section */
+        .product-showcase video {
+            max-width: 100%;
+            width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
         .benefits {
             background: var(--dark);
             color: white;
@@ -368,7 +330,6 @@
             margin: 1rem 0;
         }
 
-        /* How to Become Section */
         .how-to {
             background: var(--light);
         }
@@ -417,7 +378,6 @@
             color: var(--secondary);
         }
 
-        /* Results Section */
         .results {
             background: white;
             text-align: center;
@@ -435,7 +395,7 @@
         }
 
         .stat-number {
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: bold;
             background: linear-gradient(135deg, #003366 0%, #00cc66 100%);
             -webkit-background-clip: text;
@@ -444,12 +404,35 @@
             margin-bottom: 0.5rem;
         }
 
-        .stat-label {
-            font-size: 1.2rem;
-            color: var(--secondary);
+        .catalog-section {
+            background: var(--light);
+            text-align: center;
         }
 
-        /* Contact Section */
+        .catalog-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .catalog-links a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .catalog-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
         .contact {
             background: var(--dark);
             color: white;
@@ -472,7 +455,7 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2vw, 1.2rem);
             transition: all 0.3s;
         }
 
@@ -484,7 +467,6 @@
         .whatsapp:hover {
             background: #20ba5a;
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
         }
 
         .instagram {
@@ -494,14 +476,12 @@
 
         .instagram:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(188, 24, 136, 0.4);
         }
 
         .contact-button i {
             font-size: 2rem;
         }
 
-        /* Floating Action Buttons */
         .floating-buttons {
             position: fixed;
             bottom: 2rem;
@@ -520,22 +500,10 @@
             align-items: center;
             justify-content: center;
             color: white;
+            text-decoration: none;
             font-size: 1.8rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: all 0.3s;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
         }
 
         .floating-btn:hover {
@@ -547,10 +515,9 @@
         }
 
         .floating-instagram {
-            background: linear-gradient(45deg,#00cc66);
+            background: #00cc66;
         }
 
-        /* Footer */
         footer {
             background: var(--secondary);
             color: white;
@@ -558,74 +525,64 @@
             padding: 2rem;
         }
 
-        /* Responsive */
+        .footer-logo {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin-top: 1rem;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        .footer-logo:hover {
+            transform: scale(1.2);
+        }
+
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
             .nav-links {
-                flex-direction: column;
                 gap: 1rem;
+                font-size: 0.9rem;
             }
 
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .contact-buttons {
-                flex-direction: column;
+            .hero-media video,
+            .hero-media img {
+                width: 100%;
+                max-width: 340px;
             }
 
             .floating-buttons {
                 bottom: 1rem;
                 right: 1rem;
             }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
         }
 
-        /* Scroll Animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
+        @media (max-width: 480px) {
+            nav {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .nav-links {
+                gap: 0.5rem;
+                font-size: 0.8rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
         }
-
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-          .zoom-container {
-      width: 100%;
-      max-width: 400px;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-
-    .zoom-container img {
-      width: 100%;
-      transition: transform 0.5s ease;
-    }
-
-    .zoom-container:hover img {
-      transform: scale(1.2);
-    }
-
-    /* Para dispositivos móveis: zoom ao tocar */
-    @media (hover: none) and (pointer: coarse) {
-      .zoom-container img:active {
-        transform: scale(1.2);
-      }
-    }
     </style>
 </head>
-
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <div class="logo">AMAKHA PARIS</div>
@@ -639,159 +596,140 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Transforme Sua Vida com Amakha Paris</h1>
-            <p>Adquira nossos produtos com 50% de desconto e lucre até 200% na revenda! Cadastro gratuito e negócio
-                lucrativo!</p>
-            <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button" target="_blank">Cadastre-se
-                Grátis Agora</a>
-            <video width="340" height="360" controls autoplay muted>
-                <source src="./introdução.mp4" type="video/mp4">
-
-            </video>
-            <img src="./eu.jpeg" alt="eu-imagem" width="340" height="360">
+            <p>Adquira nossos produtos com 50% de desconto e lucre até 200% na revenda! Cadastro gratuito e negócio lucrativo!</p>
+            <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button" target="_blank">Cadastre-se Grátis Agora</a>
+            <div class="hero-media">
+                <video width="340" height="360" controls muted>
+                    <source src="./introdução.mp4" type="video/mp4">
+                </video>
+                <img src="./eu.jpeg" alt="Filipe - Consultor Amakha Paris" width="340" height="360">
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Por Que Amakha Paris?</h2>
+            <h2 class="section-title">Por Que Amakha Paris?</h2>
             <div class="about-content">
-                <div class="about-card animate-on-scroll">
+                <div class="about-card">
                     <h3>Fábrica Própria</h3>
-                    <img width="280" src="fabrica.png" alt="fabrica">
-
+                    <img src="fabrica.png" alt="Fábrica Amakha Paris">
                 </div>
-
             </div>
+            
             <div class="about-content">
-                <div class="about-card animate-on-scroll" style="margin-top: 40px;">
+                <div class="about-card">
                     <h3>Quem Somos</h3>
-                    <p>A Amakha Paris acredita no potencial de cada pessoa como sendo único. Por isso, a empresa se
-                        destaca no mercado de Venda Direta justamente por apresentar um modo de negócio que garante mais
-                        qualidade de vida a todos os nossos consultores fortalecendo o empreendedorismo por meio de
-                        oportunidades únicas pela empresa</p>
-                    <p>
-                        A Amakha foi fundada em 2017 e temos quase 2 milhões de familias em nosso negócio
-                    </p>
-                    <h4>
-                        Propósito
-                    </h4>
-                    <p>Gerar opotunidades, contribuir para a inclusão social e geração de renda no Brasil e no mundo</p>
-                    <h4>
-                        Crenças
-                    </h4>
+                    <p>A Amakha Paris acredita no potencial de cada pessoa como sendo único. Por isso, a empresa se destaca no mercado de Venda Direta justamente por apresentar um modo de negócio que garante mais qualidade de vida a todos os nossos consultores fortalecendo o empreendedorismo por meio de oportunidades únicas pela empresa.</p>
+                    <p>A Amakha foi fundada em 2017 e temos quase 2 milhões de famílias em nosso negócio.</p>
+                    
+                    <h4>Propósito</h4>
+                    <p>Gerar oportunidades, contribuir para a inclusão social e geração de renda no Brasil e no mundo.</p>
+                    
+                    <h4>Crenças</h4>
                     <p>Acreditamos nas pessoas e no seu desenvolvimento.</p>
-                    <h4>
-                        Cultura
-                    </h4>
-                    <p>Ágil, criativa, inclusiva, adoramos fomentar oportunidades</p>
+                    
+                    <h4>Cultura</h4>
+                    <p>Ágil, criativa, inclusiva, adoramos fomentar oportunidades.</p>
                 </div>
-
             </div>
-        </div>
         </div>
     </section>
 
-    <!-- Products Section -->
     <section id="products" class="products">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Mais de 600 Produtos para seu consumo inteligente e para revenda
-            </h2>
-            <div class=" product-grid">
-                <video width="380" height="360" controls autoplay muted>
+            <h2 class="section-title">Mais de 600 Produtos para seu consumo inteligente e para revenda</h2>
+            
+            <div class="product-showcase">
+                <video controls muted>
                     <source src="./produtos.mp4" type="video/mp4">
-
                 </video>
             </div>
+
             <div class="product-grid">
-                <div class="product-image">
-                    <video width="300" height="250" controls autoplay muted>
-                        <source src="./perfumes.mp4" type="video/mp4">
-                    </video>
+                <div class="product-card">
+                    <div class="product-image">
+                        <video controls muted>
+                            <source src="./perfumes.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="product-info">
+                        <h3>Perfumes Premium</h3>
+                        <p>Fragrâncias sofisticadas e duradouras que conquistam clientes</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <video controls muted>
+                            <source src="./capilar.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="product-info">
+                        <h3>Linha Capilar</h3>
+                        <p>Produtos de alta qualidade para tratamento capilar</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <video controls muted>
+                            <source src="./apresentação.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="product-info">
+                        <h3>Apresentação Completa</h3>
+                        <p>Conheça toda nossa linha de produtos</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./luva_de_silicone.jpeg" alt="Luva de Silicone">
+                    </div>
+                    <div class="product-info">
+                        <h3>Acessórios</h3>
+                        <p>Linha completa de acessórios e utilitários</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-info">
-                <h3>Perfumes Premium</h3>
-                <p>Fragrâncias sofisticadas e duradouras que conquistam clientes</p>
-            </div>
-        </div>
-
-        <div class="product-card animate-on-scroll">
-            <div class="product-image">
-                <video width="300" height="250" controls autoplay muted>
-                    <source src="./capilar.mp4" type="video/mp4">
-            </div>
-
-            <div class="product-info">
-
-                <h3>Cosméticos</h3>
-                <p>Linha completa de maquiagem e cuidados com a pele</p>
-            </div>
-        </div>
-
-        <div class="product-card animate-on-scroll">
-            <div class="product-image">
-                <video width="300" height="250" controls autoplay muted>
-                    <source src="./apresentação.mp4" type="video/mp4">
-            </div>
-
-
-        </div>
-
-       
-        </div>
-         <div class="product-card animate-on-scroll" style="margin-top: 40px;">
-
-            <div class="product-image">
-                 <img  width="250px" src="./luva_de_silicone.jpeg" alt="luva">
-            </div>
-
-            <div class="product-info">
-
-                <h3>Cosméticos</h3>
-                <p>Linha completa de maquiagem e cuidados com a pele</p>
-            </div>
-        </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
     <section id="benefits" class="benefits">
         <div class="container">
-            <h2 class="section-title animate-on-scroll" style="color: white;">Vantagens Exclusivas Para Revendedores
-            </h2>
+            <h2 class="section-title" style="color: white;">Vantagens Exclusivas Para Revendedores</h2>
             <div class="benefits-grid">
-                <div class="benefit-item animate-on-scroll">
+                <div class="benefit-item">
                     <i class="fas fa-tag"></i>
                     <h3>50% de Desconto</h3>
                     <p>Adquira todos os produtos com 50% OFF e revenda pelo preço cheio!</p>
                 </div>
-                <div class="benefit-item animate-on-scroll">
+                <div class="benefit-item">
                     <i class="fas fa-chart-line"></i>
                     <h3>Lucratividade Garantida</h3>
                     <div class="profit-highlight">100% de Lucro</div>
                     <p>Compre por 50% e venda por 200%. Seu esforço vale ouro!</p>
                 </div>
-                <div class="benefit-item animate-on-scroll">
+                <div class="benefit-item">
                     <i class="fas fa-gift"></i>
                     <h3>Cadastro Gratuito</h3>
                     <p>Sem taxas de adesão! Comece seu negócio sem investimento inicial!</p>
                 </div>
-                <div class="benefit-item animate-on-scroll">
+                <div class="benefit-item">
                     <i class="fas fa-certificate"></i>
-                    <h3>Registro na ANVISA e ABEVB</h3>
+                    <h3>Registro na ANVISA e ABEVD</h3>
                     <p>Todos os produtos certificados e aprovados pelos órgãos competentes</p>
                 </div>
-                <div class="benefit-item animate-on-scroll">
+                <div class="benefit-item">
                     <i class="fas fa-brain"></i>
                     <h3>Consumo Inteligente</h3>
                     <p>Produtos que você usa no dia a dia. Consuma e revenda!</p>
                 </div>
-                <div class="benefit-item animate-on-scroll">
+                <div class="benefit-item">
                     <i class="fas fa-rocket"></i>
                     <h3>Negócio Lucrativo</h3>
                     <p>Construa uma renda extra ou principal com flexibilidade total!</p>
@@ -800,112 +738,105 @@
         </div>
     </section>
 
-    <!-- How To Section -->
     <section id="how-to" class="how-to">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Como Se Tornar Um Revendedor</h2>
+            <h2 class="section-title">Como Se Tornar Um Revendedor</h2>
             <div class="steps">
-                <div class="step animate-on-scroll">
+                <div class="step">
                     <div class="step-number">1</div>
                     <h3>Cadastro Gratuito</h3>
                     <p>Clique no botão e faça seu cadastro grátis em poucos minutos!</p>
                 </div>
-                <div class="step animate-on-scroll">
+                <div class="step">
                     <div class="step-number">2</div>
                     <h3>Escolha Seus Produtos</h3>
                     <p>Navegue pelo catálogo e escolha os produtos que deseja adquirir com 50% OFF</p>
                 </div>
-                <div class="step animate-on-scroll">
+                <div class="step">
                     <div class="step-number">3</div>
                     <h3>Receba em Casa</h3>
                     <p>Seus produtos chegam rapidamente no conforto da sua casa</p>
                 </div>
-                <div class="step animate-on-scroll">
+                <div class="step">
                     <div class="step-number">4</div>
                     <h3>Revenda e Lucre</h3>
                     <p>Venda pelo preço cheio e lucre 100% em cada produto!</p>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button" target="_blank">Fazer
-                    Cadastro Gratuito</a>
+                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button" target="_blank">Fazer Cadastro Gratuito</a>
             </div>
         </div>
     </section>
 
-    <!-- Results Section -->
     <section id="results" class="results">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Resultados Que Transformam Vidas</h2>
+            <h2 class="section-title">Resultados Que Transformam Vidas</h2>
             <div class="stats">
-                <div class="stat-item animate-on-scroll">
+                <div class="stat-item">
                     <div class="stat-number">600+</div>
                     <div class="stat-label">Produtos Disponíveis</div>
                 </div>
-                <div class="stat-item animate-on-scroll">
+                <div class="stat-item">
                     <div class="stat-number">50%</div>
                     <div class="stat-label">Desconto Garantido</div>
                 </div>
-                <div class="stat-item animate-on-scroll">
+                <div class="stat-item">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">Lucro na Revenda</div>
                 </div>
-                <div class="stat-item animate-on-scroll">
+                <div class="stat-item">
                     <div class="stat-number">R$0</div>
                     <div class="stat-label">Taxa de Cadastro</div>
                 </div>
             </div>
             <div style="margin-top: 3rem;">
-                <p style="font-size: 1.3rem; margin-bottom: 1rem;">Se sua mente pode conceber, você pode realizar!
-                    Junte-se a milhares de revendedores de sucesso!</p>
-                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button"
-                    target="_blank">Cadastre-se Grátis Agora</a>
+                <p style="font-size: 1.3rem; margin-bottom: 1rem;">Se sua mente pode conceber, você pode realizar! Junte-se a milhares de revendedores de sucesso!</p>
+                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="cta-button" target="_blank">Cadastre-se Grátis Agora</a>
             </div>
         </div>
     </section>
-    <section>
-        <div>
-            <h2>
-                Baixe nossos catálogos
-            </h2>
-            <a href="./enciclopedia_filipe.pdf">Perfumes </a>
-            <br>
-            <a href="./enciclopedia_geral.pdf">Todos os produtos</a>
-        </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+
+    <section class="catalog-section">
         <div class="container">
-            <h2 class="section-title animate-on-scroll" style="color: white;">Cadastre-se Grátis ou Fale Comigo</h2>
-            <p style="font-size: 1.3rem; margin-bottom: 2rem;">Faça seu cadastro gratuito agora ou tire suas dúvidas
-                comigo!</p>
-            <div class="contact-buttons">
-                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="contact-button"
-                    style="background: #00cc66;" target="_blank">
-                    <i class="fas fa-user-plus"></i>
-                    <span>Cadastro Gratuito</span>
+            <h2 class="section-title">Baixe nossos catálogos</h2>
+            <div class="catalog-links">
+                <a href="./enciclopedia_geral.pdf" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Catálogo de Perfumes
                 </a>
-                <a href="https://wa.me/5538998055777?text=Olá!%20Quero%20saber%20mais%20sobre%20ser%20revendedor%20Amakha%20Paris"
-                    class="contact-button whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp do Filipe</span>
-                </a>
-                <a href="https://instagram.com/yan_menephyl_works" class="contact-button instagram" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                    <span>instagram logo</span>
+                <a href="./enciclopedia_geral.pdf" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Catálogo Completo
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Floating Action Buttons -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Cadastre-se Grátis ou Fale Comigo</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">Faça seu cadastro gratuito agora ou tire suas dúvidas comigo!</p>
+            <div class="contact-buttons">
+                <a href="https://escritorio.amakhaparis.com.br/join/149096" class="contact-button" style="background: #00cc66;" target="_blank">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Cadastro Gratuito</span>
+                </a>
+                <a href="https://wa.me/5538998055777?text=Olá!%20Quero%20saber%20mais%20sobre%20ser%20revendedor%20Amakha%20Paris" class="contact-button whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp do Filipe</span>
+                </a>
+                <a href="https://instagram.com/yan_menephyl_works" class="contact-button instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <div class="floating-buttons">
-        <a href="https://escritorio.amakhaparis.com.br/join/149096" class="floating-btn" style="background: #00cc66;"
-            target="_blank" title="Cadastro Gratuito">
+        <a href="https://escritorio.amakhaparis.com.br/join/149096" class="floating-btn" style="background: #00cc66;" target="_blank" title="Cadastro Gratuito">
             <i class="fas fa-user-plus"></i>
         </a>
-        <a href="https://wa.me/5538999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20ser%20revendedor%20Amakha%20Paris"
-            class="floating-btn floating-whatsapp" target="_blank" title="WhatsApp">
+        <a href="https://wa.me/5538998055777?text=Olá!%20Quero%20saber%20mais%20sobre%20ser%20revendedor%20Amakha%20Paris" class="floating-btn floating-whatsapp" target="_blank" title="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
         <a href="https://instagram.com/seuinstagram" class="floating-btn floating-instagram" target="_blank"
@@ -916,9 +847,9 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Amakha Paris - Todos os direitos reservados</p>
         <p>Revendedor Autorizado: Filipe</p>
-        <img class="zoom-container"  width="300" src="./unnamed.jpg" alt="">
+        <img class="zoom-container"  width="300" src="./unnamed.jpg" alt="filipe">
+        <p>&copy;Projeto feito por Yan Menephyl Works - Todos os direitos reservados</p>
     </footer>
 
     <script>
