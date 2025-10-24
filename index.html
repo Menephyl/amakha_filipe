@@ -539,7 +539,9 @@
         .footer-logo:hover {
             transform: scale(1.2);
         }
-
+.zoom-container{
+    min-width: 100%;
+}
         @media (max-width: 768px) {
             .nav-links {
                 gap: 1rem;
@@ -562,6 +564,29 @@
                 height: 50px;
                 font-size: 1.5rem;
             }
+
+            .zoom-container {
+                width: 100%;
+                max-width: 23rem;
+                overflow: hidden;
+                border-radius: 8px;
+            }
+
+            .zoom-container img {
+                width: 100%;
+                transition: transform 0.5s ease;
+            }
+
+            .zoom-container:hover img {
+                transform: scale(1.2);
+            }
+
+            /* Para dispositivos móveis: zoom ao tocar */
+            @media (hover: none) and (pointer: coarse) {
+                .zoom-container img:active {
+                    transform: scale(1.2);
+                }
+            }
         }
 
         @media (max-width: 480px) {
@@ -581,28 +606,30 @@
             section {
                 padding: 3rem 1rem;
             }
-        }
 
-        .zoom-container {
-            width: 100%;
-            max-width: 23rem;
-            overflow: hidden;
-            border-radius: 8px;
-        }
 
-        .zoom-container img {
-            width: 100%;
-            transition: transform 0.5s ease;
-        }
 
-        .zoom-container:hover img {
-            transform: scale(1.2);
-        }
+            .zoom-container {
+                width: 100%;
+                max-width: 23rem;
+                overflow: hidden;
+                border-radius: 8px;
+            }
 
-        /* Para dispositivos móveis: zoom ao tocar */
-        @media (hover: none) and (pointer: coarse) {
-            .zoom-container img:active {
+            .zoom-container img {
+                width: 100%;
+                transition: transform 0.5s ease;
+            }
+
+            .zoom-container:hover img {
                 transform: scale(1.2);
+            }
+
+            /* Para dispositivos móveis: zoom ao tocar */
+            @media (hover: none) and (pointer: coarse) {
+                .zoom-container img:active {
+                    transform: scale(1.2);
+                }
             }
         }
     </style>
@@ -815,7 +842,7 @@
                     <div class="stat-label">Desconto Garantido</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">100%</div>
+                    <div class="stat-number">200%</div>
                     <div class="stat-label">Lucro na Revenda</div>
                 </div>
                 <div class="stat-item">
@@ -879,8 +906,8 @@
             class="floating-btn floating-whatsapp" target="_blank" title="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="https://instagram.com/seuinstagram" class="floating-btn floating-instagram" target="_blank"
-            title="Instagram">
+        <a href="https://www.instagram.com/filipeamakha?igsh=MW5lcnF2cjJhNWJnNA==&utm_source=ig_contact_invite"
+            class="floating-btn floating-instagram" target="_blank" title="Instagram">
             <i class="fab fa-instagram"></i>
         </a>
     </div>
@@ -888,9 +915,9 @@
     <!-- Footer -->
     <footer>
         <p>Revendedor Autorizado: Filipe</p>
-        <img class="zoom-container" 
-         src="./unnamed.jpg" alt="filipe">
-        <p>&copy;Projeto feito por Yan Menephyl Works - Todos os direitos reservados</p>
+        <img class="zoom-container" src="./unnamed.jpg" alt="filipe">
+        <p>&copy;Projeto feito por <a href="https://instagram.com/yan_menephyl_works">Yan Menephyl Works</a> - Todos os
+            direitos reservados</p>
     </footer>
 
     <script>
